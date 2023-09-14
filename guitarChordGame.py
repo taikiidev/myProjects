@@ -42,8 +42,6 @@ if (leveSelect == '!help'):
 totalAttempts = 0
 #LEVEL ONE CODE
 
-   
-
 if (leveSelect == '1'):
     print('')
     print('********************')
@@ -72,7 +70,6 @@ if (leveSelect == '1'):
             correctAnswers = correctAnswers + 1
             continue
         else:
-            points = points - 100
             print('Thats incorrect!')
             continue
 
