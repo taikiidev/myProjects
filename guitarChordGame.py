@@ -43,6 +43,7 @@ totalAttempts = 0
 #LEVEL ONE CODE
 
 if (leveSelect == '1'):
+
     print('')
     print('********************')
     print('LEVEL CHOSEN : EASY ')
@@ -61,11 +62,7 @@ if (leveSelect == '1'):
         userInput = userInput.replace(' ','')
         userInput = userInput.upper()
 
-        if (len(userInput)<3 or len(userInput) > 20):
-            print('That is not a valid answer!')
-            continue
-
-        elif (userInput == chordList[secretChord]):
+        if (userInput == chordList[secretChord]):
             print('That is correct!')
             correctAnswers = correctAnswers + 1
             continue
@@ -76,6 +73,7 @@ if (leveSelect == '1'):
 #LEVEL TWO CODE
 
 if (leveSelect == '2'):
+
     print('')
     print('**********************')
     print('LEVEL CHOSEN : MEDIUM ')
@@ -90,21 +88,16 @@ if (leveSelect == '2'):
 
         secretChord = random.choice(chordsInLevel)
         chordsInLevel.remove(secretChord)
-
         print(f'-----Attempt {retries} of {totalAttempts}-----')
         userInput = str (input(f'What are the notes of the following chord: {secretChord}'))
         userInput = userInput.replace(' ','')
         userInput = userInput.upper()
-        
 
-        if (len(userInput)<3 or len(userInput) > 20):
-            print('That is not a valid answer!')
-            continue
-
-        elif (userInput == chordList[secretChord]):
+        if (userInput == chordList[secretChord]):
             print('That is correct!')
             correctAnswers = correctAnswers + 1
             continue
+
         else:
             print('Thats incorrect!')
             continue
@@ -112,37 +105,30 @@ if (leveSelect == '2'):
 # falta colocar os acordes adicionais dessa dificuldade.
 
 if (leveSelect == '3'):
+
     print('')
     print('********************')
     print('LEVEL CHOSEN : HARD ')
     print('********************')
     print('')
 
-    chordsInLevel =  ['cmaj','dmaj','amaj','emaj','fmaj','bmaj','cmaj7','dmaj','amaj7','emaj7','fmaj7','bmaj9','cmin7','dmin7','gmin7','fmin7']
+    chordsInLevel =  ['cmaj','dmaj','amaj','emaj','fmaj','bmaj','cmaj7','dmaj','amaj7','emaj7','fmaj7','bmaj','cmin7','dmin7','gmin7','fmin7']
     totalAttempts = 10
     correctAnswers = 0
     
     for retries in range (1, totalAttempts +1):
         
-        
         secretChord = random.choice(chordsInLevel)
         chordsInLevel.remove(secretChord)
-
         print(f'-----Attempt {retries} of {totalAttempts}-----')
         userInput = str (input(f'What are the notes of the following chord: {secretChord}\n'))
         userInput = userInput.replace(' ','')
         userInput = userInput.upper()
     
-
-        if (len(userInput)<3 or len(userInput) > 20):
-            print('That is not a valid answer!\n')
-            continue
-
-        elif (userInput == chordList[secretChord]):
+        if (userInput == chordList[secretChord]):
             print('That is correct!\n')
             correctAnswers = correctAnswers + 1
             continue
-
         else:
             print("That's incorrect!\n")
             continue     
